@@ -1,0 +1,64 @@
+body {
+    background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+header {
+    background-color:black;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+.box {
+    background-color: grey;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#weatherIcon {
+    width: 100px;
+    height: 100px;
+}
+
+#forecast {
+    margin-top: 20px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction:column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}

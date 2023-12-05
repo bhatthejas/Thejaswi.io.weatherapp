@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Weather app</h2>
+            <ul>
+                <li>Home <a href="#"></a></li>
+                <li>About us <a href="#"></a></li>
+                <li>Contact <a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1>Weather App</h1>
+            <p>Find the weather for your location</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="input-group mb-3">
+                    <input type="text" id="locationInput" class="form-control" placeholder="Enter Location" />
+                    <div class="input-group-append">
+                        <button id="searchButton" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h2>Weather in <span id="cityName"></span></h2>
+                    </div>
+                    <div class="card-body">
+                        <img id="weatherIcon" src="cloudy.png" alt="Weather Icon" />
+                        <p id="weatherDescription"></p>
+                        <h3>Temperature: <span id="temperature"></span>&deg;C</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div id="forecast" class="text-center">
+                    <!-- Forecast data will be displayed here -->
+                    <div class="row">
+                        <div class="col-2 box">
+                            <h3>DAY 1</h3>
+                            <h6>Sunny(25&deg;C - 32&deg;C)</h6>
+                            <img id="weatherIcon" src="sun.png" alt="Weather Icon" />
+
+                        </div>
+                        <div class="col-2 box">
+                            <h3>DAY 2</h3>
+                            <h6>Cloudy(26&deg;C - 32&deg;C)</h6>
+                            <img id="weatherIcon" src="cld.png" alt="Weather Icon" />
+                        </div>
+                        <div class="col-2 box">
+                            <h3>DAY 3</h3>
+                            <h6>Rainy(23&deg;C - 29&deg;C)</h6>
+                            <img id="weatherIcon" src="rainy.png" alt="Weather Icon" />
+                        </div>
+                        <div class="col-2 box">
+                            <h3>DAY 4</h3>
+                            <h6>Cloudy(24&deg;C - 30&deg;C)</h6>
+                            <img id="weatherIcon" src="cld.png" alt="Weather Icon" />
+                        </div>
+                        <div class="col-2 box">
+                            <h3>DAY 5</h3>
+                            <h6>Rainy(22&deg;C - 29&deg;C)</h6>
+                            <img id="weatherIcon" src="rainy.png" alt="Weather Icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <center><p>&copy; Weather app</p></center>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const locationInput = document.getElementById("locationInput");
+            const searchButton = document.getElementById("searchButton");
+            const cityNameSpan = document.getElementById("cityName");
+    
+            searchButton.addEventListener("click", function () {
+                const location = locationInput.value;
+    
+                if (location) {
+                    cityNameSpan.textContent = location;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
